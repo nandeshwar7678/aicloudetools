@@ -10,15 +10,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
       - name: Deploy via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
-          server: aicloudetools.com
+          server: ftp.aicloudetools.com
           username: kpbisslzozf2
           password: Akashya@12
-          protocol: ftps
+          protocol: ftp
           port: 21
+          passive: true
           server-dir: /public_html/
