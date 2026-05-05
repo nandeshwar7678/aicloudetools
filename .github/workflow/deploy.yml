@@ -1,0 +1,22 @@
+name: Auto Deploy to GoDaddy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Deploy via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: ftp.aicloudetools.com
+          username: kpbisslzozf2
+          password: Akashya@1223424
+          server-dir: /public_html/
