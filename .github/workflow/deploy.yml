@@ -18,5 +18,5 @@ jobs:
         with:
           server: ftp.aicloudetools.com
           username: kpbisslzozf2
-          password: Akashya@1223424
+          password: Akashya@12
           server-dir: /public_html/
