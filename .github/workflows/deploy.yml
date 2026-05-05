@@ -15,10 +15,9 @@ jobs:
       - name: Deploy via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
-          server: ftp.aicloudetools.com
+          server: aicloudetools.com
           username: kpbisslzozf2
           password: Akashya@12
-          protocol: ftp
           port: 21
-          passive: true
+          protocol: ftp
           server-dir: /public_html/
