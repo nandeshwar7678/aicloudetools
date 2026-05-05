@@ -3,9 +3,9 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>AICloud Tools</title>
+  <title>AICloud Tools - AI Video, AI Images, PDF Editor, Reels Downloader & More</title>
   <meta name="description"
-    content="Discover AI-generated videos, images, and movies. Easily create and share modern digital content with cutting-edge AI technology.">
+    content="AICloud Tools is an all-in-one platform for AI video creation, AI-generated images, and entertainment. Download Instagram reels, edit PDFs, create Word & Excel files, remove image backgrounds, and solve all image-related tasks. Get latest stock market news, finance updates, and useful tools for students, creators, and everyday needs.">
   <link rel="icon" type="image/png" href="Images/logo.png">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -35,78 +35,84 @@
 <body>
   <!-- Header -->
   <header class="header">
-    <!-- Mobile Top Bar Hamburger-->
-    <div class="mobile-bar">
+
+    <div class="top-bar">
+      <!-- Hamburger -->
       <div class="menu-toggle" id="menuToggle">
         <i class="fa-solid fa-bars"></i>
-        <nav>
-          <ul class="menu">
-            <li>
-              AI VIDEOS <span class="arrow"><i class="fa-solid fa-angle-down"></i></span>
-              <ul class="submenu">
-                <li>Trending</li>
-                <li>Categories</li>
-                <li>New Tools</li>
-              </ul>
-            </li>
-
-            <li>
-              AI IMAGES <span class="arrow"><i class="fa-solid fa-angle-down"></i></span>
-              <ul class="submenu">
-                <li>AI Images</li>
-                <li>Stock Photos</li>
-              </ul>
-            </li>
-
-            <li>
-              MOVIES <span class="arrow"><i class="fa-solid fa-angle-down"></i></span>
-              <ul class="submenu">
-                <li onclick="window.open('https://www.thenextplanet.watch/', '_blank')">TheNextPlanet</li>
-                <li onclick="window.open('https://net22.cc/home', '_blank')">NetMirror</li>
-                <li onclick="window.open('https://bolly4u.camera/', '_blank')">Bolly4u</li>
-                <li onclick="window.open('https://uhdmovies.pink/', '_blank')">uHDMovies</li>
-                <li onclick="window.open('https://movies4u.ba/', '_blank')">Movies4u</li>
-                <li onclick="window.open('https://site.goldmov123.online/', '_blank')">FilmyGod</li>
-              </ul>
-            </li>
-          </ul>
-        </nav>
       </div>
 
-    </div>
-    <div class="logoASearch">
-      <input type="text" placeholder="Search..." class="search">
-      <a href="https://aicloudetools.com" class="logo">
-        <img src="Images/logo.png" alt="AICLOUDE TOOLS">
-      </a>
-    </div>
-    <script>
-      // const menuItems = document.querySelectorAll(".navbar ul li");
-      const menuItems = document.querySelectorAll(".menu > li");
+      <div class="logoASearch">
+        <input type="text" placeholder="Search..." class="search">
+        <a href="https://aicloudetools.com" class="logo">
+          <img src="Images/logo.png" alt="AICLOUDE TOOLS">
+        </a>
+      </div>
 
-      menuItems.forEach(item => {
-        item.addEventListener("click", () => {
-          item.classList.toggle("active");
+      <!-- Menu -->
+      <nav id="mainMenu">
+        <ul class="menu">
+          <li>AI VIDEOS <span class="arrow"><i class="fa-solid fa-angle-down"></i></span>
+            <ul class="submenu">
+              <li>Trending</li>
+              <li>Categories</li>
+            </ul>
+          </li>
+
+          <li>AI IMAGES <span class="arrow"><i class="fa-solid fa-angle-down"></i></span>
+            <ul class="submenu">
+              <li>AI Images</li>
+              <li>Stock Photos</li>
+            </ul>
+          </li>
+
+          <li>
+            MOVIES <span class="arrow"><i class="fa-solid fa-angle-down"></i></span>
+            <ul class="submenu">
+              <li onclick="window.open('https://www.thenextplanet.watch/', '_blank')">TheNextPlanet</li>
+              <li onclick="window.open('https://net22.cc/home', '_blank')">NetMirror</li>
+              <li onclick="window.open('https://bolly4u.camera/', '_blank')">Bolly4u</li>
+              <li onclick="window.open('https://uhdmovies.pink/', '_blank')">uHDMovies</li>
+              <li onclick="window.open('https://movies4u.ba/', '_blank')">Movies4u</li>
+              <li onclick="window.open('https://site.goldmov123.online/', '_blank')">FilmyGod</li>
+            </ul>
+          </li>
+
+        </ul>
+      </nav>
+
+      <script>
+        // const menuItems = document.querySelectorAll(".navbar ul li");
+        const menuItems = document.querySelectorAll(".menu > li");
+
+        menuItems.forEach(item => {
+          item.addEventListener("click", () => {
+            item.classList.toggle("active");
+          });
         });
-      });
-    </script>
-
+      </script>
+    </div>
   </header>
 
   <!-- aicloude -->
   <!-- ********************Banner****************** -->
   <div class="slider">
+    <p>Trending Tools <i class="fa-solid fa-arrow-trend-up"></i></p>
     <div class="movie-section"></div>
   </div>
   <!--***************************** nandeshwar ads ****************-->
-  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6012458078401430" data-ad-slot="6505171543"
-    data-ad-format="auto" data-full-width-responsive="true"></ins>
+  <div class="ad-wrapper">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6012458078401430" data-ad-slot="6505171543"
+      data-ad-format="auto" data-full-width-responsive="true"></ins>
+  </div>
+
   <script>
     (adsbygoogle = window.adsbygoogle || []).push({});
   </script>
 
   <!-- ****************************END**************************** -->
   <!-- ********************End****************** -->
+  <p class="card-headline">Everything is Here <i class="fa-solid fa-solidLarge fa-bookmark">‌</i></p>
   <main class="aicloude">
 
     <div class="card" onclick="window.open('https://arena.ai/', '_blank')">
@@ -147,7 +153,7 @@
     <!-- Top Categories -->
     <!-- Top Categories SLIDER -->
     <div class="footer-categories-wrapper">
-
+      <button class="nav-btn prev">&#10094;</button>
       <div class="footer-categories" id="slider">
         <a href="animation.html" class="cat">
           <img src="https://picsum.photos/120?1">
@@ -179,7 +185,7 @@
         </a>
 
       </div>
-
+      <button class="nav-btn next">&#10095;</button>
     </div>
 
     <!--***************************** Middle Links **************************-->

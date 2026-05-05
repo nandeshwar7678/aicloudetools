@@ -39,69 +39,53 @@ function autoLoop() {
 
 setInterval(autoLoop, 16); // smooth animation (~60fps)
 
-//scrolling
-
-// let scrollAmount = 0;
-
-// function autoScroll() {
-//   scrollAmount += 2; // speed
-
-//   // reset when end reached
-//   if (scrollAmount >= section.scrollWidth - section.clientWidth) {
-//     scrollAmount = 0;
-//   }
-
-//   section.scrollLeft = scrollAmount;
-// }
-
-// setInterval(autoScroll, 20); // speed control
-//*************END**************** */
-
 
 //*************FOOTER**************** */
 function goToPage(page) {
   window.location.href = page;
 }
 const slider = document.getElementById("slider");
+const next = document.querySelector(".next");
+const prev = document.querySelector(".prev");
 
-// Clone items for infinite loop
-slider.innerHTML += slider.innerHTML;
+const scrollAmount = 200; // kitna move kare
 
-let speed = 0.5;
-let rafId;
+next.onclick = () => {
+  slider.scrollLeft += scrollAmount;
+};
 
-// 🚀 Continuous animation loop
-function startScroll() {
-  function step() {
-    slider.scrollLeft += speed;
-
-    // Seamless loop reset
-    if (slider.scrollLeft >= slider.scrollWidth / 2) {
-      slider.scrollLeft = 0;
-    }
-
-    rafId = requestAnimationFrame(step);
-  }
-
-  step();
-}
-
-// ⏸ Stop safely
-function stopScroll() {
-  if (rafId) cancelAnimationFrame(rafId);
-}
-
-// ▶ Start once
-startScroll();
-
-// ⏸ Pause on hover
-slider.addEventListener("mouseenter", stopScroll);
-slider.addEventListener("mouseleave", startScroll);
-
-// 📱 Mobile touch support
-slider.addEventListener("touchstart", stopScroll);
-slider.addEventListener("touchend", startScroll);
+prev.onclick = () => {
+  slider.scrollLeft -= scrollAmount;
+};
 
 //*************END**************** */
+//*************MenuToggle**************** */
+
+
+const toggle = document.getElementById("menuToggle");
+const menu = document.getElementById("mainMenu");
+
+toggle.addEventListener("click", () => {
+  menu.classList.toggle("active");
+});
+
+// submenu toggle mobile
+document.querySelectorAll(".menu > li").forEach(item => {
+  item.addEventListener("click", function () {
+    if (window.innerWidth <= 768) {
+      this.classList.toggle("active");
+    }
+  });
+});
+
+//*************END**************** */
+
+
+
+
+
+
+
+
 
 
