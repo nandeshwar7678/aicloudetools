@@ -19,6 +19,6 @@ jobs:
           server: aicloudetools.com
           username: kpbisslzozf2
           password: Akashya@12
-          protocol: ftp
+          protocol: ftps
           port: 21
           server-dir: /public_html/
