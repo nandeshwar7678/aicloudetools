@@ -80,7 +80,95 @@ document.querySelectorAll(".menu > li").forEach(item => {
 
 //*************END**************** */
 
+//=====================
+// CONTECT US POPUP CLOSE 
+//=========================
+// SEND MESSAGE
 
+async function sendMessage(){
+
+    const userType =
+    document.getElementById("userType").value;
+
+    const name =
+    document.getElementById("name").value;
+
+    const email =
+    document.getElementById("email").value;
+
+    const message =
+    document.getElementById("message").value;
+
+
+
+    const data = {
+
+        userType,
+        name,
+        email,
+        message
+
+    };
+
+
+
+    try{
+
+        const response = await fetch(
+            "http://localhost:5000/contact",
+            {
+
+                method:"POST",
+
+                headers:{
+                    "Content-Type":"application/json"
+                },
+
+                body:JSON.stringify(data)
+
+            }
+        );
+
+
+
+        const result = await response.json();
+
+
+
+        // SUCCESS MESSAGE
+
+        alert(result.message);
+
+
+
+        // CLOSE POPUP
+
+        document.getElementById("contactPopup")
+        .style.display = "none";
+
+
+
+        // RESET FORM
+
+        document.getElementById("userType").value = "";
+
+        document.getElementById("name").value = "";
+
+        document.getElementById("email").value = "";
+
+        document.getElementById("message").value = "";
+
+    }
+
+    catch(error){
+
+        alert("Something Went Wrong");
+
+    }
+
+}  
+
+//================END==============//
 
 
 

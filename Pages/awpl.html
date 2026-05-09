@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWPL Wellness Products</title>
+    <link rel="icon" type="image/png" href="Product Images/awpl logo.png">
+    <link rel="stylesheet" href="awpl.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+</head>
+
+<body>
+
+    <!--// ====================== 
+   // HERO SECTION
+  // ====================== -->
+    <section class="hero">
+
+        <div class="overlay"></div>
+
+        <div class="hero-content">
+            <h1>Wellness</h1>
+        </div>
+
+    </section>
+
+    <!-- BREADCRUMB -->
+    <div class="breadcrumb">
+        <span>WELLNESS PRODUCT</span>
+    </div>
+
+    <!-- MAIN -->
+    <section class="main-container">
+
+        <!--// ====================== 
+   // SIDEBAR
+  // ====================== -->
+
+        <aside class="sidebar">
+            <ul>
+                <li class="active" onclick="filterProducts('all')">
+                    ALL PRODUCTS
+                    <span id="all-count">0</span>
+                </li>
+
+                <li onclick="filterProducts('wellness')">
+                    WELLNESS PRODUCT
+                    <span id="wellness-count">0</span>
+                </li>
+
+                <li onclick="filterProducts('homecare')">
+                    HOME CARE
+                    <span id="homecare-count">0</span>
+                </li>
+
+                <li onclick="filterProducts('oralcare')">
+                    ORAL CARE
+                    <span id="oralcare-count">0</span>
+                </li>
+
+            </ul>
+
+        </aside>
+
+
+
+        <!--// ====================== 
+   // PRODUCT GRID
+  // ====================== -->
+
+        <div class="product-grid">
+
+            <!-- WELLNESS -->
+
+            <div class="product-card" data-category="wellness">
+
+                <div class="product-image">
+
+                    <img src="https://asclepiuswellness.com/UploadImage/Product/2064.png">
+
+                    <div class="wishlist">
+                        <i class="fa-regular fa-heart"></i>
+                    </div>
+
+                </div>
+
+                <h3>EXE PANCH TULSI OIL</h3>
+
+                <div class="price">
+                    MRP : ₹404.00
+                </div>
+
+                <p>Qty : 25 ML</p>
+
+            </div>
+
+
+
+            <!-- WELLNESS -->
+
+            <div class="product-card" data-category="wellness">
+
+                <div class="product-image">
+
+                    <img src="https://asclepiuswellness.com/UploadImage/Product/2053.png">
+
+                    <div class="wishlist">
+                        <i class="fa-regular fa-heart"></i>
+                    </div>
+
+                </div>
+
+                <h3>ADIDOC PRAVAHI KWATH</h3>
+
+                <div class="price">
+                    MRP : ₹444.00
+                </div>
+
+                <p>Qty : 25 ML</p>
+
+            </div>
+
+
+
+            <!-- HOME CARE -->
+
+            <div class="product-card" data-category="homecare">
+
+                <div class="product-image">
+
+                    <img src="https://asclepiuswellness.com/UploadImage/Product/2054.png">
+
+                    <div class="wishlist">
+                        <i class="fa-regular fa-heart"></i>
+                    </div>
+
+                </div>
+
+                <h3>HOME CLEANER</h3>
+
+                <div class="price">
+                    MRP : ₹250.00
+                </div>
+
+                <p>Qty : 500 ML</p>
+
+            </div>
+
+
+
+            <!-- ORAL CARE -->
+
+            <div class="product-card" data-category="oralcare">
+
+                <div class="product-image">
+
+                    <img src="https://asclepiuswellness.com/UploadImage/Product/2054.png">
+
+                    <div class="wishlist">
+                        <i class="fa-regular fa-heart"></i>
+                    </div>
+
+                </div>
+
+                <h3>TOOTHPASTE</h3>
+
+                <div class="price">
+                    MRP : ₹120.00
+                </div>
+
+                <p>Qty : 100 GM</p>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!--// ====================== 
+   // CONTECT US
+  // ====================== -->
+    <div class="contact-icon" onclick="openContactPopup()">
+        <i class="fa-solid fa-headset"></i>
+    </div>
+    <!-- CONTACT POPUP -->
+    <div class="contact-popup" id="contactPopup">
+        <div class="popup-box">
+            <span class="close-btn" onclick="closeContactPopup()">
+                &times;
+            </span>
+            <h2>Contact Support</h2>
+            <!-- USER TYPE -->
+            <select id="userType" required>
+                <option value="">
+                    Select User Type
+                </option>
+                <option value="new">
+                    New User
+                </option>
+                <option value="existing">
+                    Existing User
+                </option>
+            </select>
+            <!-- NAME -->
+            <input type="text" id="name" placeholder="Enter Your Name">
+            <!-- EMAIL -->
+            <input type="email" id="email" placeholder="Enter Your Email">
+            <!-- PHONE -->
+            <input type="tel" id="phone" placeholder="Enter Your Contact Number" required>
+            <!-- MESSAGE -->
+            <textarea id="message" placeholder="Drop Your Message Here" required></textarea>
+            <!-- BUTTON -->
+            <button onclick="sendMessage()">
+                Submit Message
+            </button>
+        </div>
+    </div>
+
+    <script src="awpl.js"></script>
+
+</body>
+
+</html>
