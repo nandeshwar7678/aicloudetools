@@ -162,7 +162,7 @@ async function sendMessage() {
 
     // VALIDATION
 
-    if(!userType || !name || !email || !phone || !message) {
+    if (!userType || !name || !email || !phone || !message) {
 
         alert("Please fill all fields");
 
@@ -203,17 +203,13 @@ async function sendMessage() {
     try {
 
         const response = await fetch(
-            "https://api.aicloudetools.com/contact",
+            "https://aicloudetools.onrender.com/contact",
             {
-
                 method: "POST",
-
                 headers: {
                     "Content-Type": "application/json"
                 },
-
                 body: JSON.stringify(data)
-
             }
         );
 
