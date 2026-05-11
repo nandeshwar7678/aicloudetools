@@ -203,7 +203,7 @@ async function sendMessage() {
     try {
 
         const response = await fetch(
-            "https://aicloudetools.onrender.com/contact",
+            "https://aicloudetools-4.onrender.com/contact",
             {
                 method: "POST",
                 headers: {
