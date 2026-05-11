@@ -128,7 +128,7 @@ app.post("/contact", async (req, res) => {
 //     console.log("Server Running on 5000");
 // });
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 10000;
 
 app.listen(PORT, () => {
     console.log(`Server Running on ${PORT}`);
