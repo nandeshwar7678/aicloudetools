@@ -115,7 +115,7 @@ async function sendMessage(){
     try{
 
         const response = await fetch(
-            "http://localhost:5000/contact",
+            "https://aicloudetools.com/contact",
             {
 
                 method:"POST",
